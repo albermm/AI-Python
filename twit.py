@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 import requests
+
 from requests_oauthlib import OAuth1Session
 from requests_oauthlib import OAuth1
 from urllib.parse import urlparse
@@ -8,11 +9,11 @@ REQUEST_TOKEN_URL = "https://api.twitter.com/oauth/request_token"
 AUTHORIZE_URL = "https://api.twitter.com/oauth/authorize?oauth_token="
 ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
 
-CONSUMER_KEY = "fntDSfJzlUAutiPheEKeP1AQl"
-CONSUMER_SECRET = "45EKtyijar5S6CLbqmYDBh3sWqyepqBi3r2WfYIPPsFuWQ7RFH"
+CONSUMER_KEY = "# XXX: "
+CONSUMER_SECRET = "# XXX: "
 
-OAUTH_TOKEN = "207452277-bHesmJ9WmIpOMraoJT0Rwv30kDlSVcHLlTGW5l3Z"
-OAUTH_TOKEN_SECRET = "BfNzNEez0sSBxLErvqWXUP7sqBxJQUYS3iUm6GSEtpdGC"
+OAUTH_TOKEN = "# XXX: "
+OAUTH_TOKEN_SECRET = "# XXX: "
 
 
 def setup_oauth():
@@ -61,4 +62,5 @@ if __name__ == "__main__":
     else:
         oauth = get_oauth()
         r = requests.get(url="https://api.twitter.com/1.1/statuses/mentions_timeline.json", auth=oauth)
+
         print (r.json())
